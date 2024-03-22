@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class StudentList implements StudentActivities {
     private ArrayList<Student> list;
@@ -131,7 +129,7 @@ public class StudentList implements StudentActivities {
         // TODO Auto-generated method stub
         int count = 0;
         for (Student sv : list) {
-            if (sv.equals(findId)) {
+            if (sv.getId().equals(findId)) {
                 System.out.printf("%-6s%-20s%-20s%-10s%-10s%s\n", "ID", "Họ và tên", "Địa chỉ", "Năm sinh", "Lớp",
                         "Điểm số");
                 System.out.printf("%-6s%-20s%-20s%-10d%-10s%.2f\n", sv.getId(), sv.getName(), sv.getAddress(),
